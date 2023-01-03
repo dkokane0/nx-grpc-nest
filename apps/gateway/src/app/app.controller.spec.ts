@@ -14,10 +14,10 @@ describe('AppController', () => {
   });
 
   describe('getData', () => {
-    it('should return "Welcome to nx-grpc-nestjs!"', () => {
+    it('should return "Welcome to gateway!"', () => {
       const appController = app.get<AppController>(AppController);
       expect(appController.getData()).toEqual({
-        message: 'Welcome to nx-grpc-nestjs!',
+        message: 'Welcome to gateway!',
       });
     });
   });

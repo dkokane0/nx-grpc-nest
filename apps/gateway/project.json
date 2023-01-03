@@ -1,7 +1,7 @@
 {
-  "name": "nx-grpc-nestjs",
+  "name": "gateway",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nx-grpc-nestjs/src",
+  "sourceRoot": "apps/gateway/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,10 +10,10 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/nx-grpc-nestjs",
-        "main": "apps/nx-grpc-nestjs/src/main.ts",
-        "tsConfig": "apps/nx-grpc-nestjs/tsconfig.app.json",
-        "assets": ["apps/nx-grpc-nestjs/src/assets"]
+        "outputPath": "dist/apps/gateway",
+        "main": "apps/gateway/src/main.ts",
+        "tsConfig": "apps/gateway/tsconfig.app.json",
+        "assets": ["apps/gateway/src/assets"]
       },
       "configurations": {
         "production": {
@@ -22,8 +22,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/nx-grpc-nestjs/src/environments/environment.ts",
-              "with": "apps/nx-grpc-nestjs/src/environments/environment.prod.ts"
+              "replace": "apps/gateway/src/environments/environment.ts",
+              "with": "apps/gateway/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -32,11 +32,11 @@
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
-        "buildTarget": "nx-grpc-nestjs:build"
+        "buildTarget": "gateway:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "nx-grpc-nestjs:build:production"
+          "buildTarget": "gateway:build:production"
         }
       }
     },
@@ -44,14 +44,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nx-grpc-nestjs/**/*.ts"]
+        "lintFilePatterns": ["apps/gateway/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/nx-grpc-nestjs/jest.config.ts",
+        "jestConfig": "apps/gateway/jest.config.ts",
         "passWithNoTests": true
       }
     }

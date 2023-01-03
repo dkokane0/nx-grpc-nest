@@ -5,9 +5,13 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@grpc/grpc-js": "^1.8.0",
+    "@grpc/proto-loader": "^0.7.4",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/microservices": "^9.2.1",
     "@nestjs/platform-express": "^9.0.0",
+    "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0"
@@ -18,7 +22,7 @@
     "@nrwl/eslint-plugin-nx": "15.4.1",
     "@nrwl/jest": "15.4.1",
     "@nrwl/linter": "15.4.1",
-    "@nrwl/nest": "15.4.1",
+    "@nrwl/nest": "^15.4.1",
     "@nrwl/node": "15.4.1",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.4.1",
